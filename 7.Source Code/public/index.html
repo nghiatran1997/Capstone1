@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="height=device-height, initial-scale=1.0">
+
+  <title>ENGLISH FOR YOU</title>
+  <link href="https://www.googleapis.com/css?family=Quicksand:500" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+  <script src="http://code.jquery.com/jquery-3.2.1.js" type="text/javascript"></script>
+  <script src="javascript/javascript.js" type="text/javascript" charset="utf-8" async defer></script>
+  <script src="javscript/jquery.js"></script>
+    <script defer src="/__/firebase/5.5.4/firebase-app.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script defer src="/__/firebase/5.5.4/firebase-auth.js"></script>
+    <script defer src="/__/firebase/5.5.4/firebase-database.js"></script>
+    <script defer src="/__/firebase/5.5.4/firebase-messaging.js"></script>
+    <script defer src="/__/firebase/5.5.4/firebase-storage.js"></script>
+    <!-- initialize the SDK after all desired features are loaded -->
+    <script defer src="/__/firebase/init.js"></script>
+</head>
+
+<body>
+    <div class="top-content">
+        <section class="sec1">
+            <nav>
+                <div class="menu-icon">
+                    <i class="fa fa-bars"></i>
+                </div>
+                <div class="logo"><a style="text-decoration: none; " href="index.html">ENGLISH FOR YOU</a></div>
+                <ul>
+                    <li><a href="waitingpage.html">Words Explain</a></li>
+                    <li><a href="">Chat</a></li>
+                    <li><a href="">Listen</a></li>
+                    <li><a class="active" href="login.html">Login</a></li>
+                </ul>
+            </nav>
+        </section>
+        <section class="content slide-1"><a href="waitingpage.html">Words Explain</a>
+            <p>Co-op with orther member in group to guess and explain words
+            </p>
+        </section>
+        <section class="content slide-2"><a href="">Chat</a>
+            <p>Chat with foreigner to gain communication skill  
+            </p>
+        </section>
+        <section class="content slide-3"><a href="">Listen</a>
+            <p> With many type music, video will help your Listening improve.
+            </p>
+        </section>
+    </div>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        $(document).ready(function() {
+            $(".menu-icon").on("click", function() {
+                $("nav ul").toggleClass("showing");
+            });
+        });
+
+        // Scrolling Effect
+
+        $(window).on("scroll", function() {
+            if ($(window).scrollTop()) {
+                $('nav').addClass('black');
+            } else {
+                $('nav').removeClass('black');
+            }
+        });
+    });
+    </script>
+</body>
+
+</html>
