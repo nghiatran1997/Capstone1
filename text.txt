@@ -1,1 +1,3 @@
-nghia dang chinh sua
+Define of Done 
+-Meet requirement
+-Pass 70% test case hight Priority .
