@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="height=device-height, initial-scale=1.0">
+    <title>Words Explain</title>
+    <!-- update the version number as needed -->
+    <link rel="stylesheet" href="css/style.css">
+    <script defer src="/__/firebase/5.5.4/firebase-app.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script defer src="/__/firebase/5.5.4/firebase-auth.js"></script>
+    <script defer src="/__/firebase/5.5.4/firebase-database.js"></script>
+    <script defer src="/__/firebase/5.5.4/firebase-messaging.js"></script>
+    <script defer src="/__/firebase/5.5.4/firebase-storage.js"></script>
+    <!-- initialize the SDK after all desired features are loaded -->
+    <script defer src="/__/firebase/init.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.js" type="text/javascript"></script>
+</head>
+
+<body>
+    <div class="chat-container">
+        <nav>
+            <div class="menu-icon">
+                <i class="fa fa-bars"></i>
+            </div>
+            <div class="logo"><a style="text-decoration: none; " href="index.html">ENGLISH FOR YOU</a></div>
+            <ul>
+                <li><a href="waitingpage.html">Words Explain</a></li>
+                <li><a href="">Chat</a></li>
+                <li><a href="">Listen</a></li>
+                <li><a class="active" href="login.html">Login</a></li>
+                <li><a class="active logout">Logout</a></li>
+            </ul>
+        </nav>
+        <div class="chat-content">
+            <div class="top">
+                <h2>WORD EXPLAIN</h2>
+            </div>
+            <div class="mid-chat">
+                <div class="teama team">
+                    <div class="header-team">
+                        <div class="team-name">TEAM A</div>
+                        <div class="point">Point:</div>
+                    </div>
+                    <div class="member">
+                        <div class="member-name">
+                            <div class="icon"></div>
+                            <div class="name"></div>
+                        </div>
+                        <div class="rule"></div>
+                    </div>
+                    <div class="member">
+                        <div class="member-name">
+                            <div class="icon"></div>
+                            <div class="name"></div>
+                        </div>
+                        <div class="rule"></div>
+                    </div>
+                </div>
+                <div class="chat">
+                    <div class="middle-content" id="chat-box">
+                        <div class="force-overflow">
+                        </div>
+                    </div>
+                    <div id="chat-form">
+                        <textarea autofocus placeholder="Write here..." spellcheck="false" id="content-input"></textarea>
+                        <!-- <input type="text" id="content-input"> -->
+                        <button id="chat-btn" type="button">Send</button>
+                    </div>
+                </div>
+                <div class="teamb team">
+                    <div class="header-team">
+                        <div class="team-name">TEAM B</div>
+                        <div class="point">Point:</div>
+                    </div>
+                    <div class="member">
+                        <div class="member-name">
+                            <div class="icon"></div>
+                            <div class="name"></div>
+                        </div>
+                        <div class="rule"></div>
+                    </div>
+                    <div class="member">
+                        <div class="member-name">
+                            <div class="icon"></div>
+                            <div class="name"></div>
+                        </div>
+                        <div class="rule"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="key-word"></div>
+            <div class="bot-chat"></div>
+        </div>
+    </div>
+    <script type="text/javascript">
+    $(document).ready(function() {
+        $(".menu-icon").on("click", function() {
+            $("nav ul").toggleClass("showing");
+        });
+    });
+    $('.middle-content').scrollTop($('.middle-content')[0].scrollHeight);
+
+   
+    </script>
+    <script type="text/javascript" src="javascript/bundle.js" async></script>
+
+</body>
+
+</html>
