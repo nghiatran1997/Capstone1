@@ -4,7 +4,6 @@ body {
     font-family: sans-serif;
     font-size: 20px;
 }
-
 nav {
     top: 0;
     left: 0;
@@ -106,6 +105,7 @@ nav ul li a.active {
     border-radius: 5px;
     opacity: unset;
     color: unset;
+    display: inline;
 }
 
 section.sec1 {
@@ -216,18 +216,29 @@ section a {
     margin: 15px 0 0 40px;
     color: #fff;
 }
+.box .fb-icon {
+    width:200px; 
+    height: 30px; 
+    margin-left: 40px;
 
-.box a {
-    padding-top: 5px;
-    padding-left: 40px;
-    display: block;
-    color: #fff;
-    font-size: 18px;
+}
+.fb-icon .login-btn {   
+    width: 100%;
+    height: 100%;
+    display:inline-block;
+    background-color: transparent;
+
+}
+.login-btn span {
+    width: 100%;
+    height: 100%;
+    background-image: url(../hinh/fblink.JPG);
+    background-size: cover;
+    
+
 }
 
-.box a i {
-    color: none;
-}
+
 
 
 
@@ -244,22 +255,26 @@ section a {
 
 #main-container {
     width: 100%;
-    height: 100%;  
+    height: 100%; 
     display: flex;
     flex-direction: column;
-    position: absolute;
 }
 #main-container .top {
-    flex-basis: 20%;
+    flex-basis: 15%;
     border-top: 1px solid black;
    /*  border-bottom: 1px solid black; */
     box-shadow: 3px 3px 10px rgba(0, 0, 0, .3);
     background-color: #f1f1f9;
 }
+.top h2 {
+    margin-top: 40px;
+    margin-left: 60px;
+    font-size: 30px;
+}
 #main-container .mid-content {
     display: flex;
     width: 100%;
-    flex-basis: 60%;
+    flex-basis: 65%;
     /* border-bottom: 1px solid black; */
     box-shadow: 3px 3px 10px rgba(0, 0, 0, .3);
     background-color: #616161;
@@ -272,6 +287,9 @@ section a {
     font-size: 30px;
     padding: 0 15px 0 15px;
     border-radius: 4px;
+}
+#waiting {
+    margin: 30px;
 }
 .mid-content .game-rule {
     flex-basis : 50%;
@@ -286,7 +304,7 @@ section a {
     margin-left: 10%;
     width: 80%;
     height: 80%;
-    background-color: white;
+    background-color: #f1f1f9;
     border-radius: 7px;
     resize: vertical;
     box-sizing: border-box;
@@ -305,6 +323,208 @@ section a {
     background-color: #f1f1f9;
 }
 
+/* word explain chat ----------------------------------------------------------------------------------- */
+.chat-container {
+    width: 100%;
+    height: 110vh;
+}
+.chat-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    font-size: 23px;
+}
+.chat-content .top {
+    flex-basis: 15%;
+    border-top: 1px solid black;
+   /*  border-bottom: 1px solid black; */
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, .3);
+    background-color: #f1f1f9;
+}
+.chat-content .mid-chat {
+    display: flex;
+    width: 100%;
+    flex-basis: 27rem;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, .3);
+    background-color: #616161;
+
+}
+
+.mid-chat .team {
+    flex-basis: 20%;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+}
+    .team .header-team {
+        flex-basis: 20%;
+        display: flex;
+    }
+        .header-team .team-name {
+        flex-basis: 50%;
+        border: 1px solid black;
+        }
+        .header-team .point {
+        flex-basis: 50%;
+        border: 1px solid black;
+        }
+    .team .member {
+    height: 40%;
+    border: 1px solid black;
+    }
+    .member .rule {
+        width: 100%;
+        height: 50%;
+        border: 1px solid black;
+    }
+    .member .member-name {
+        width: 100%;
+        height: 50%;
+        display: flex;
+        border: 1px solid black;
+    }
+    .member-name .icon {
+        flex-basis: 25%;
+        border: 1px solid black;
+    }
+    .member-name .name {
+        flex-basis: 75%;
+        border: 1px solid black;
+    }
+
+
+        
+
+
+.mid-chat .chat {
+    flex-basis: 60%;
+    display: flex;
+    flex-direction: column;
+    background-color: #f1f1f9;
+}
+.chat #chat-box {
+     flex-basis: 80%;
+     overflow-y: auto;
+    padding-top: 1.4rem;
+}
+.chat #chat-form {
+    flex-basis: 20%;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, .4);
+    position: relative;
+}
+#chat-form textarea {
+    border: none;
+    outline: none;
+    resize: none;
+    height: 100%;
+    width: 80%;
+    line-height: 1.3rem;
+    background-color: transparent;
+    flex-grow: 1;
+}
+#chat-form input {
+    border: none;
+    outline: none;
+    resize: none;
+    height: 100%;
+    width: 80%;
+    line-height: 1.3rem;
+    background-color: transparent;
+    flex-grow: 1;
+}
+#chat-form button {
+    border: none;
+    width: 19%;
+    height: 100%;
+    background-color: transparent;
+    color: dodgerblue;
+    font-size: 14px;
+    text-transform: uppercase;
+    transition: 200ms ease;
+    position: absolute;
+    border-radius: 3px;
+}
+/* ------------------------------------ */
+.fr, .me { 
+    display: flex; 
+    align-items: center; 
+    position: relative;
+}
+
+.me { justify-content: flex-end; }
+
+.fr .chat-content, .me .chat-content {
+    margin: 1rem .8rem;
+    padding: 10px 20px;
+    display: inline-block;
+    position: relative;
+    border-radius: 4px;
+    max-width: 35%;
+}
+
+.fr .chat-content { background-color: #e3ecec; }
+
+.fr span, .me span {
+    font-size: 13px;
+    position: absolute;
+    top: -2px;
+    font-weight: 300;
+    text-shadow: .2px .2px .4px rgba(0,0,0, .16);
+}
+
+.fr span { left: 20px; }
+.me span { right: 20px; }
+
+.me .chat-content { 
+    background-color: dodgerblue; 
+    color: white; 
+    font-size: 17px;
+}
+
+.fr .chat-content:before, .me .chat-content:before {
+    content: '';  
+    width: 0;
+    height: 0;
+    border-width: 7px;
+    position: absolute;
+    border-style: solid;
+    border-color: transparent;
+}
+
+.fr .chat-content:before {
+    left: -1px;
+    bottom: -9px;
+    transform: rotateZ(8.5deg);
+    border-top-color: #e3ecec;
+    border-left-color: #e3ecec;
+}
+
+.me .chat-content:before {
+    right: 0px;
+    bottom: -9px;
+    transform: rotateZ(-8.5deg);
+    border-top-color: dodgerblue;
+    border-right-color: dodgerblue;
+}
+/* -------------------------------------- */
+#chat-form button:hover {
+    background-color: #616161;
+}
+.chat-content .key-word {
+    flex-basis: 10rem;
+    border-bottom: 1px solid black;
+   /*  border-bottom: 1px solid black; */
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, .3);
+    background-color: #f1f1f9;
+}
+.chat-content .bot-chat {
+    flex-basis: 10rem;
+    border-bottom: 1px solid black;
+   /*  border-bottom: 1px solid black; */
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, .3);
+    background-color: #f1f1f9;
+}
 
 @media(max-width: 992px) {
 

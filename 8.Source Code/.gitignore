@@ -63,5 +63,4 @@ node_modules/
 
 # dotenv environment variables file
 .env
-# file json
-.package-lock.json
+.node_modules

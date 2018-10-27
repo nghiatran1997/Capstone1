@@ -1,16 +1,21 @@
 {
-  "name": "baitapcss",
+  "name": "capstone1",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build":"browserify public/javascript/javascript.js -o public/javascript/bundle.js",
+    "watch":"watchify public/javascript/javascript.js -o public/javascript/bundle.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.16.3",
-    "pug": "^2.0.3"
+    "firebase": "^5.5.5",
+    "firebase-admin": "^6.1.0"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "browserify": "^16.2.3",
+    "watchify": "^3.11.0"
+  },
   "description": ""
 }
