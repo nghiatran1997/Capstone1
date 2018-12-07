@@ -1,0 +1,39 @@
+doctype html
+head
+  title ENGLISH FOR YOU
+  include include/script.pug
+.top-content
+  section.sec1
+    include include/nav.pug
+  section.content.slide-1
+    a(href='waitingpage.html') Words Explain
+    p
+      | Co-op with orther member in group to guess and explain words
+  section.content.slide-2
+    a(href='') Chat
+    p
+      | Chat with foreigner to gain communication skill
+  section.content.slide-3
+    a(href='') Listen
+    p
+      | With many type music, video will help your Listening improve.
+script.
+  $(document).ready(function() {
+  $(".menu-icon").on("click", function() {
+  $("nav ul").toggleClass("showing");
+  });
+  });
+  $(document).ready(function() {
+  $(".user-icon").on("click", function() {
+  $("nav ul li .user-icon .drop-down").toggleClass("showing");
+  });
+  });
+  // Scrolling Effect
+  $(window).on("scroll", function() {
+  if ($(window).scrollTop()) {
+  $('nav').addClass('black');
+  } else {
+  $('nav').removeClass('black');
+  }
+  });
+script(scr='/assets/javascript/javascript.js')
