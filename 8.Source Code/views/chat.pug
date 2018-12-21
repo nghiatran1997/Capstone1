@@ -1,0 +1,76 @@
+doctype html
+head
+  title Words Explain
+  include include/script.pug 
+.chat-container
+  include include/nav.pug
+  .chat-content
+    .top
+      h2 WORD EXPLAIN
+    .mid-chat
+      .teama.team
+        .header-team
+          .team-name TEAM A
+          .point Scores:
+        //- .member
+        //-   .member-name
+        //-     .icon
+        //-     .name
+        //-   .rule Explainer
+        //- .member
+        //-   .member-name
+        //-     .icon
+        //-     .name
+        //-   .rule Answer
+      .chat
+        #chat-box.middle-content
+          .force-overflow
+        #information
+          #suggest
+            .letter H
+            .letter E
+            .letter L
+            .letter O
+            span.type verb
+            span.scores +100
+          #time
+            strong#minutes -
+            |  min
+            strong#seconds -
+            |  sec
+        #chat-form
+          textarea#content-input(autofocus='', placeholder='Write here...', spellcheck='false')
+          // <input type="text" id="content-input">
+          button#chat-btn(type='button') Send
+      .teamb.team
+        .header-team
+          .team-name TEAM B
+          .point Scores:
+        .member
+          .member-name
+            .icon
+            .name
+          .rule Answer
+        .member
+          .member-name
+            .icon
+            .name 
+          .rule Answer
+    #key-word
+    .bot-chat
+
+script(src="socket.io/socket.io.js")
+script(src="/assets/javascript/clientSocket.js")
+script(scr='/assets/javascript/javascript.js')
+script(type='text/javascript').
+  $(document).ready(function() {
+  $(".menu-icon").on("click", function() {
+  $("nav ul").toggleClass("showing");
+  });
+  $(document).ready(function() {
+  $(".user-icon").on("click", function() {
+  $("nav ul li .user-icon .drop-down").toggleClass("showing");
+  });
+  });
+  $('.middle-content').scrollTop($('.middle-content')[0].scrollHeight);
+  });
